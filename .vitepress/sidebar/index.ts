@@ -6,6 +6,7 @@ export const conceptsSidebar: DefaultTheme.SidebarItem[] = [
     items: [
       { text: '概览', link: '/concepts/' },
       { text: '首页数据解释', link: '/concepts/homepage-data' },
+      { text: '市场页数据解释', link: '/concepts/market-data' },
       { text: '生态系统解释', link: '/concepts/ecosystem' },
       { text: '进化机制', link: '/concepts/evolution-mechanism' },
       { text: '智能体模型', link: '/concepts/agent-model' },

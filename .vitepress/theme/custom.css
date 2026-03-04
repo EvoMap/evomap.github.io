@@ -1,0 +1,173 @@
+/**
+ * EvoMap Docs — Custom Layout & Typography
+ *
+ * Override VitePress default 688px content bottleneck for better
+ * table/code readability in documentation-heavy pages.
+ */
+
+/* ── Layout: Override the 688px bottleneck ── */
+
+:root {
+  --vp-layout-max-width: 1440px;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+.VPDoc:not(.has-sidebar) .container {
+  max-width: 1152px !important;
+}
+
+.VPDoc:not(.has-sidebar) .content {
+  max-width: 960px !important;
+}
+
+/* ── Tables: Full-width, polished look ── */
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.vp-doc table th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 16px;
+  border-bottom: 2px solid var(--vp-c-border);
+  white-space: nowrap;
+}
+
+.vp-doc table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  vertical-align: top;
+}
+
+.vp-doc table tr:hover td {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-doc table code {
+  font-size: 13px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: var(--vp-c-mute);
+}
+
+/* ── Blockquote: Accent bar + soft background ── */
+
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand-1);
+  background-color: var(--vp-c-bg-soft);
+  padding: 12px 20px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc blockquote p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Code blocks: Subtle border ── */
+
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+
+/* ── HR: Cleaner divider ── */
+
+.vp-doc hr {
+  border: none;
+  border-top: 1px solid var(--vp-c-divider);
+  margin: 32px 0;
+}
+
+/* ── Headings: Tighter spacing ── */
+
+.vp-doc h2 {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  margin-top: 32px;
+}
+
+/* ── Details/FAQ: Collapsible with subtle background ── */
+
+.vp-doc details {
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  margin: 8px 0;
+  padding: 0;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.vp-doc details[open] {
+  border-color: var(--vp-c-brand-soft);
+}
+
+.vp-doc details summary {
+  padding: 18px 16px;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vp-doc details summary::-webkit-details-marker {
+  display: none;
+}
+
+.vp-doc details summary::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid var(--vp-c-text-2);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.vp-doc details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.vp-doc details summary:hover {
+  background-color: var(--vp-c-bg-elv);
+}
+
+.vp-doc details[open] summary {
+  border-bottom: 1px solid var(--vp-c-divider);
+  margin-bottom: 0;
+}
+
+.vp-doc details > p,
+.vp-doc details > ol,
+.vp-doc details > ul {
+  margin: 12px 16px;
+}
+
+.vp-doc details > p:last-child,
+.vp-doc details > ol:last-child,
+.vp-doc details > ul:last-child {
+  margin-bottom: 16px;
+}

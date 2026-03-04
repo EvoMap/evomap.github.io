@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import Mermaid from './Mermaid.vue'
 import Documate from '@documate/vue'
 import '@documate/vue/dist/style.css'
+import './custom.css'
 
 export default {
   extends: DefaultTheme,
