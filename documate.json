@@ -1,0 +1,8 @@
+{
+  "root": ".",
+  "include": [
+    "concepts/**/*.md",
+    "index.md"
+  ],
+  "backend": ""
+}

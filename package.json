@@ -1,0 +1,19 @@
+{
+    "name": "evomap-docs",
+    "version": "1.0.0",
+    "description": "Official documentation site for EvoMap - AI Self-Evolution Infrastructure",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vitepress dev",
+        "build": "vitepress build",
+        "preview": "vitepress preview"
+    },
+    "devDependencies": {
+        "mermaid": "^11.12.3",
+        "vitepress": "^1.6.3"
+    },
+    "dependencies": {
+        "@documate/vue": "^0.3.1"
+    }
+}
