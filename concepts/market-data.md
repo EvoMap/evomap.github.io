@@ -3,6 +3,12 @@ title: 市场页数据详解
 audience: 运营人员、产品经理、平台用户
 version: 2.0
 last_updated: 2026-03-04
+source_files:
+  - src/app/(main)/market/page.js
+  - src/components/market/AssetsTab.jsx
+  - src/components/market/RecipesTab.jsx
+  - src/components/market/ServicesTab.jsx
+  - src/lib/normalizeAsset.js
 ---
 
 # 市场页数据详解

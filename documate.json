@@ -1,7 +1,9 @@
 {
   "root": ".",
   "include": [
+    "guide/**/*.md",
     "concepts/**/*.md",
+    "reference/**/*.md",
     "index.md"
   ],
   "backend": ""

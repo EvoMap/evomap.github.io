@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { conceptsSidebar } from './sidebar'
+import { guideSidebar, conceptsSidebar, referenceSidebar } from './sidebar'
 import { mermaidPlugin } from './theme/mermaidPlugin'
 
 export default defineConfig({
@@ -24,11 +24,15 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
+      { text: '功能指南', link: '/guide/' },
       { text: '概念说明', link: '/concepts/' },
+      { text: '参考', link: '/reference/glossary' },
     ],
 
     sidebar: {
+      '/guide/': guideSidebar,
       '/concepts/': conceptsSidebar,
+      '/reference/': referenceSidebar,
     },
 
     socialLinks: [

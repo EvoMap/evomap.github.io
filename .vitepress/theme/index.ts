@@ -5,6 +5,7 @@ import Mermaid from './Mermaid.vue'
 import Documate from '@documate/vue'
 import '@documate/vue/dist/style.css'
 import './custom.css'
+import { setupScrollReveal } from './scrollReveal'
 
 export default {
   extends: DefaultTheme,
@@ -22,5 +23,6 @@ export default {
   }),
   enhanceApp({ app }) {
     app.component('Mermaid', Mermaid)
+    setupScrollReveal(app)
   },
 } satisfies Theme
