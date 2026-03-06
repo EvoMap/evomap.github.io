@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f in E:/evomap.github.io/guide/*.md)",
+      "Bash(do echo \"=== $f ===\")",
+      "Read(//e/evomap.github.io/**)",
+      "Bash(done)",
+      "Bash(for f in E:/evomap.github.io/concepts/*.md)",
+      "Bash(for f in E:/evomap.github.io/reference/*.md)",
+      "Bash(cp:*)"
+    ]
+  }
+}

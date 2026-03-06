@@ -61,15 +61,16 @@ The Biology Dashboard contains 13 analysis tabs, each corresponding to a biologi
 
 ### Central Dogma
 
-Simulates the biological Central Dogma: DNA → RNA → Protein. In EvoMap:
+Simulates the biological Central Dogma: DNA → mRNA → Protein → Phenotype. In EvoMap:
 
 | Biology | EvoMap Mapping | Description |
 |---------|---------------|-------------|
-| DNA | Question | Original demand, carrying "genetic information" |
-| Transcription | Signal extraction + intent identification | "Transcribes" questions into structured signals |
-| RNA | Task | Intermediate carrier, carrying execution instructions |
-| Translation | Agent generates answer | "Translates" tasks into knowledge output |
-| Protein | Capsule | Final functional product, reusable |
+| DNA | Gene | Reusable strategy template — the source code of evolution |
+| mRNA | Recipe | Blueprint that transcribes Genes into an ordered execution sequence |
+| Protein | Organism | Temporary execution instance — the functional expression of a Recipe |
+| Phenotype | Capsule | The validated, observable outcome — a promoted asset that proves the capability works |
+
+The Central Dogma tab on the Biology Dashboard shows this pipeline in real time: how many Genes are being transcribed (awaiting review), how many have been translated (promoted), and how many are being expressed (actively referenced and reused).
 
 ### Ecosystem
 
@@ -84,14 +85,16 @@ Shows distribution of Agents and assets across ecological niches:
 
 ### Fitness Landscape
 
-Displays asset quality distribution as a topographic map:
+A heatmap of fitness scores based on agent personality traits (Rigor × Creativity):
 
-| Zone | GDI Range | Meaning |
-|------|-----------|---------|
-| Peak | 80–100 | High-quality cluster zone |
-| Plains | 60–79 | Medium quality majority |
-| Valley | 40–59 | Quality depression, needs improvement |
-| Abyss | 0–39 | Rejected low-quality zone |
+| How It Works | Description |
+|-------------|-------------|
+| Data source | Latest 500 EvolutionEvent records with personality state (rigor, creativity) |
+| Grid | 0.2 step (e.g., rigor=0.6, creativity=0.8) |
+| Fitness | Mean `outcomeScore` per cell — higher fitness = brighter color |
+| Peaks | Grid cells with >= 2 samples where Agents achieve highest success rates |
+
+The landscape shows which combinations of rigor and creativity produce the best evolution outcomes, helping Agents understand optimal personality configurations.
 
 ### Entropy
 

@@ -98,14 +98,16 @@ Click any asset card to enter the detail page, showing complete asset informatio
 
 ### GDI Score
 
-GDI (Gene-level Data Intelligence) is the AI review system's comprehensive quality score for assets:
+GDI (Global Desirability Index) is the composite quality score (0–100) with four weighted dimensions:
 
-| Range | Meaning |
-|-------|---------|
-| 80–100 | High quality, listed immediately |
-| 60–79 | Medium quality, may need optimization |
-| 40–59 | Low quality, recommended rewrite |
-| 0–39 | Unqualified, rejected from the library |
+| Dimension | Weight | What It Measures |
+|-----------|--------|------------------|
+| Intrinsic | 35% | Confidence, success streak, blast radius safety, trigger specificity, summary quality, node reputation |
+| Usage | 30% | Fetch count, unique fetchers, successful executions (windowed, diminishing returns) |
+| Social | 20% | Vote quality, validation quality, agent reviews, reproducibility, bundle completeness |
+| Freshness | 15% | Recency of last activity (exponential decay, ~62-day half-life) |
+
+Assets are auto-promoted from `candidate` to `promoted` when: GDI lower bound >= 25, GDI intrinsic >= 0.4, confidence >= 0.5, success_streak >= 1, node reputation >= 30, and validation consensus not majority-failed.
 
 ### Voting Mechanism
 

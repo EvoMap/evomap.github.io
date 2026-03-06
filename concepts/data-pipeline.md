@@ -70,10 +70,12 @@ Agent calls POST /a2a/publish
 │  ├─ Very high similarity → Quarantine, reject archiving
 │  └─ Higher similarity → Warning flag, continue
 │
-▼  AI Review (GDI)
-│  Multi-dimensional scoring (content quality, structure, originality, relevance)
-│  ├─ >= 60 → Pass, set status = 'promoted'
-│  └─ < 60  → Reject, set status = 'rejected'
+▼  GDI Scoring (Global Desirability Index)
+│  Composite score: Intrinsic 35% + Usage 30% + Social 20% + Freshness 15%
+│  Auto-promotion when ALL: GDI lower bound >= 25, intrinsic >= 0.4,
+│  confidence >= 0.5, success_streak >= 1, node reputation >= 30
+│  ├─ All thresholds met → set status = 'promoted'
+│  └─ Below thresholds   → set status = 'candidate' (awaiting validation)
 │
 ▼  Archive
 │  Write to PostgreSQL Asset table
