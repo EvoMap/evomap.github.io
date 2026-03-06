@@ -1,119 +1,119 @@
 ---
-title: 知识图谱
-audience: Premium 及以上用户
+title: Knowledge Graph
+audience: Premium and above users
 version: 1.0
 last_updated: 2026-03-05
 source_files:
   - src/app/(main)/kg/page.js
 ---
 
-# 知识图谱
+# Knowledge Graph
 
-知识图谱（`/kg`）提供基于语义关系的知识搜索和可视化。不同于市场页的关键词搜索，知识图谱理解概念之间的关联——它能告诉你"Express 和 Koa 是什么关系"，而不仅仅是"包含 Express 的资产有哪些"。
+The Knowledge Graph (`/kg`) provides semantic relationship-based knowledge search and visualization. Unlike the keyword search on the market page, the Knowledge Graph understands connections between concepts — it can tell you "what's the relationship between Express and Koa," not just "which assets contain Express."
 
-## 快速参考
+## Quick Reference
 
-| 指标 | 字段 | 说明 |
-|------|------|------|
-| 余额 | `balance` | 当前可用于 KG 操作的积分 |
-| 查询次数 | `usage_30d.query_count` | 最近 30 天的查询次数 |
-| 摄入次数 | `usage_30d.ingest_count` | 最近 30 天的知识摄入次数 |
-| 积分消耗 | `usage_30d.total_credits` | 最近 30 天消耗的积分 |
-
----
-
-## 访问权限
-
-| 用户类型 | 访问状态 |
-|---------|---------|
-| 免费用户 | 锁定 |
-| Premium 用户 | 完整访问 |
-| Ultra 用户 | 完整访问 |
-| 管理员 | 完整访问 |
-
-当访问被锁定时，页面使用 `ProductPageLayout` 展示功能介绍和升级引导。
+| Metric | Field | Description |
+|--------|-------|-------------|
+| Balance | `balance` | Credits available for KG operations |
+| Query Count | `usage_30d.query_count` | Queries in the last 30 days |
+| Ingest Count | `usage_30d.ingest_count` | Knowledge ingestions in the last 30 days |
+| Credits Used | `usage_30d.total_credits` | Credits consumed in the last 30 days |
 
 ---
 
-## 页面功能
+## Access Permissions
 
-### 图谱可视化
+| User Type | Access Status |
+|-----------|--------------|
+| Free Users | Locked |
+| Premium Users | Full access |
+| Ultra Users | Full access |
+| Admins | Full access |
 
-`KgGraph` 组件以力导向图（Force-directed Graph）展示知识节点和关系：
+When access is locked, the page uses `ProductPageLayout` to show feature introduction and upgrade prompts.
 
-| 元素 | 说明 |
-|------|------|
-| 节点 | 代表一个概念或实体 |
-| 边 | 代表概念之间的语义关系 |
-| 节点大小 | 反映该概念被引用的频次 |
-| 边的粗细 | 反映关系的强度 |
+---
 
-### 语义搜索
+## Page Features
 
-通过自然语言查询知识图谱：
+### Graph Visualization
+
+The `KgGraph` component displays knowledge nodes and relationships as a force-directed graph:
+
+| Element | Description |
+|---------|-------------|
+| Node | Represents a concept or entity |
+| Edge | Represents semantic relationship between concepts |
+| Node Size | Reflects how frequently the concept is referenced |
+| Edge Thickness | Reflects relationship strength |
+
+### Semantic Search
+
+Query the knowledge graph using natural language:
 
 ```text
-查询："微服务架构的认证方案"
-→ 返回与认证、微服务、JWT、OAuth 相关的知识节点和它们之间的关系
+Query: "Authentication solutions for microservices architecture"
+→ Returns knowledge nodes related to authentication, microservices, JWT, OAuth and their relationships
 ```
 
-搜索结果通过 `KgResultCards` 组件展示匹配的知识卡片。
+Search results are displayed via the `KgResultCards` component as matching knowledge cards.
 
-### 知识摄入
+### Knowledge Ingestion
 
-`KgIngestForm` 允许用户向知识图谱添加新的知识源：
+`KgIngestForm` allows users to add new knowledge sources to the graph:
 
-| 功能 | 说明 |
-|------|------|
-| 手动摄入 | 输入文本或 URL 进行知识提取 |
-| 自动关联 | 系统自动识别并建立与现有知识的关系 |
+| Feature | Description |
+|---------|-------------|
+| Manual Ingestion | Input text or URL for knowledge extraction |
+| Auto-linking | System automatically identifies and builds relationships with existing knowledge |
 
-### 示例查询
+### Example Queries
 
-`KgExamples` 组件提供预设的查询示例，帮助新用户快速上手。
-
----
-
-## 计费
-
-知识图谱的操作按次计费：
-
-| 操作 | 费用 | 说明 |
-|------|------|------|
-| 查询 | 根据 `pricing` 配置 | 每次语义搜索扣费 |
-| 摄入 | 根据 `pricing` 配置 | 每次知识摄入扣费 |
-
-余额不足时操作会被拒绝。可在 `/account/balance` 查看积分明细。
+The `KgExamples` component provides preset query examples to help new users get started quickly.
 
 ---
 
-## 数据来源
+## Billing
 
-| API | 用途 |
-|-----|------|
-| `GET /api/hub/kg/status` | 获取访问权限、余额和用量统计 |
-| `POST /api/hub/kg/query` | 执行语义搜索 |
-| `POST /api/hub/kg/ingest` | 提交知识摄入 |
+Knowledge Graph operations are billed per use:
+
+| Operation | Cost | Description |
+|-----------|------|-------------|
+| Query | Based on `pricing` config | Credits deducted per semantic search |
+| Ingest | Based on `pricing` config | Credits deducted per knowledge ingestion |
+
+Operations are rejected when balance is insufficient. View credit details at `/account/balance`.
 
 ---
 
-## 常见问题
+## Data Sources
+
+| API | Purpose |
+|-----|---------|
+| `GET /api/hub/kg/status` | Get access permissions, balance, and usage stats |
+| `POST /api/hub/kg/query` | Execute semantic search |
+| `POST /api/hub/kg/ingest` | Submit knowledge ingestion |
+
+---
+
+## FAQ
 
 <details>
-<summary><strong>知识图谱搜索和市场搜索有什么区别？</strong></summary>
+<summary><strong>What's the difference between Knowledge Graph search and Market search?</strong></summary>
 
-| 维度 | 市场搜索 | 知识图谱搜索 |
-|------|---------|------------|
-| 搜索方式 | 关键词匹配 | 语义理解 |
-| 返回内容 | 资产列表 | 概念关系图 |
-| 理解深度 | 字面匹配 | 概念关联 |
-| 费用 | 免费 | 按次计费 |
+| Dimension | Market Search | Knowledge Graph Search |
+|-----------|--------------|----------------------|
+| Search Method | Keyword matching | Semantic understanding |
+| Returns | Asset list | Concept relationship graph |
+| Depth | Literal matching | Conceptual association |
+| Cost | Free | Billed per use |
 
 </details>
 
 <details>
-<summary><strong>摄入的知识会被公开吗？</strong></summary>
+<summary><strong>Will ingested knowledge be made public?</strong></summary>
 
-摄入的知识会被纳入知识图谱的语义网络，但不会直接作为资产公开展示。它们以关系和概念的形式增强图谱的深度和广度。
+Ingested knowledge is incorporated into the Knowledge Graph's semantic network, but it won't be directly displayed as public assets. It enhances the graph's depth and breadth in the form of relationships and concepts.
 
 </details>

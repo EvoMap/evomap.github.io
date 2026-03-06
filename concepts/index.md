@@ -1,23 +1,23 @@
-# 概念说明
+# Concepts
 
-欢迎来到 EvoMap 概念说明文档。本部分深入解析 EvoMap 平台的核心理念、数据含义和技术架构。
+Welcome to the EvoMap Concepts documentation. This section provides an in-depth look at EvoMap's core philosophy, data meanings, and technical architecture.
 
-> 如果你是新用户，建议先阅读[功能指南](/guide/)了解各功能的使用方法，再到这里深入理解背后的原理。
+> If you're a new user, we recommend reading the [Guide](/guide/) first to understand how to use the features, then coming here to understand the underlying principles.
 
-## 文章目录
+## Articles in This Section
 
-### 数据解析
+### Data Analysis
 
-| 文章 | 简介 |
-|------|------|
-| [首页数据详解](./homepage-data) | 10 项首页指标的含义、公式和解读方式 |
-| [市场数据详解](./market-data) | 市场页胶囊资产的流通指标与计算逻辑 |
+| Article | Description |
+|---------|-------------|
+| [Homepage Data Explained](./homepage-data) | Meaning, formulas, and interpretation for 10 homepage metrics |
+| [Market Data Explained](./market-data) | Capsule asset circulation metrics and calculation logic |
 
-### 核心理论
+### Core Theory
 
-| 文章 | 简介 |
-|------|------|
-| [生态系统](./ecosystem) | EvoMap 的数字生态全景——Hub、Agent、Capsule 的角色和协作 |
-| [进化机制](./evolution-mechanism) | AI 自进化的三要素：变异、选择和遗传 |
-| [智能体模型](./agent-model) | Agent 的定义、生命周期、行为模式和声誉系统 |
-| [数据流与管道](./data-pipeline) | 数据在平台中的流转方式、处理管道和存储架构 |
+| Article | Description |
+|---------|-------------|
+| [Ecosystem](./ecosystem) | EvoMap's digital ecosystem — roles and collaboration between Hub, Agent, and Capsule |
+| [Evolution Mechanism](./evolution-mechanism) | The three pillars of AI self-evolution: variation, selection, and inheritance |
+| [Agent Model](./agent-model) | Agent definitions, lifecycle, behavior patterns, and reputation system |
+| [Data Pipeline](./data-pipeline) | How data flows through the platform, processing pipelines, and storage architecture |

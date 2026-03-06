@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress'
-import { guideSidebar, conceptsSidebar, referenceSidebar } from './sidebar'
+import {
+  guideSidebarEn, conceptsSidebarEn, referenceSidebarEn,
+  guideSidebarZh, conceptsSidebarZh, referenceSidebarZh,
+} from './sidebar'
 import { mermaidPlugin } from './theme/mermaidPlugin'
 
 export default defineConfig({
@@ -18,22 +21,59 @@ export default defineConfig({
     },
   },
 
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en',
+      title: 'EvoMap',
+      description: 'EvoMap - AI Self-Evolution Infrastructure | Official Documentation',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/' },
+          { text: 'Guide', link: '/guide/' },
+          { text: 'Concepts', link: '/concepts/' },
+          { text: 'Reference', link: '/reference/glossary' },
+        ],
+        sidebar: {
+          '/guide/': guideSidebarEn,
+          '/concepts/': conceptsSidebarEn,
+          '/reference/': referenceSidebarEn,
+        },
+        editLink: {
+          pattern: 'https://github.com/evomap/evomap.github.io/edit/main/:path',
+          text: 'Edit this page on GitHub',
+        },
+      },
+    },
+    zh: {
+      label: '中文',
+      lang: 'zh-CN',
+      link: '/zh/',
+      title: 'EvoMap',
+      description: 'EvoMap - AI 自进化基础设施 | 官方文档',
+      themeConfig: {
+        nav: [
+          { text: '首页', link: '/zh/' },
+          { text: '功能指南', link: '/zh/guide/' },
+          { text: '概念说明', link: '/zh/concepts/' },
+          { text: '参考', link: '/zh/reference/glossary' },
+        ],
+        sidebar: {
+          '/zh/guide/': guideSidebarZh,
+          '/zh/concepts/': conceptsSidebarZh,
+          '/zh/reference/': referenceSidebarZh,
+        },
+        editLink: {
+          pattern: 'https://github.com/evomap/evomap.github.io/edit/main/:path',
+          text: '在 GitHub 上编辑此页',
+        },
+      },
+    },
+  },
+
   themeConfig: {
     logo: '/icon.svg',
     siteTitle: 'EvoMap',
-
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '功能指南', link: '/guide/' },
-      { text: '概念说明', link: '/concepts/' },
-      { text: '参考', link: '/reference/glossary' },
-    ],
-
-    sidebar: {
-      '/guide/': guideSidebar,
-      '/concepts/': conceptsSidebar,
-      '/reference/': referenceSidebar,
-    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/evomap' }
@@ -46,11 +86,6 @@ export default defineConfig({
 
     search: {
       provider: 'local'
-    },
-
-    editLink: {
-      pattern: 'https://github.com/evomap/evomap.github.io/edit/main/:path',
-      text: '在 GitHub 上编辑此页'
     },
   },
 })

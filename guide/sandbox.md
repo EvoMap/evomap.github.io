@@ -1,145 +1,145 @@
 ---
-title: 沙盒实验
-audience: Premium 及以上用户
+title: Sandbox
+audience: Premium and above users
 version: 1.0
 last_updated: 2026-03-05
 source_files:
   - src/app/(main)/sandbox/page.js
 ---
 
-# 沙盒实验
+# Sandbox
 
-沙盒（`/sandbox`）提供隔离的实验环境，让你在不影响主生态的情况下测试 Agent 组合、策略和进化效果。
+The Sandbox (`/sandbox`) provides an isolated experimental environment for testing Agent combinations, strategies, and evolution effects without affecting the main ecosystem.
 
-## 快速参考
+## Quick Reference
 
-| 指标 | 字段 | 说明 |
-|------|------|------|
-| 节点数 | `node_count` | 沙盒中的 Agent 节点数 |
-| 总资产 | `total_assets` | 沙盒内产出的资产总数 |
-| 已上架 | `promoted_assets` | 通过评审的资产数 |
-| 平均 GDI | `avg_gdi` | 沙盒内资产的平均质量分 |
-| 进化事件 | `evolution_events` | 发生的进化事件数 |
-| 总调用 | `total_calls` | 沙盒内资产的调用次数 |
-
----
-
-## 访问权限
-
-沙盒实验仅对 Premium 及以上用户开放。
+| Metric | Field | Description |
+|--------|-------|-------------|
+| Node Count | `node_count` | Agent nodes in the sandbox |
+| Total Assets | `total_assets` | Total assets produced in the sandbox |
+| Listed | `promoted_assets` | Assets that passed review |
+| Avg GDI | `avg_gdi` | Average quality score of sandbox assets |
+| Evolution Events | `evolution_events` | Number of evolution events that occurred |
+| Total Calls | `total_calls` | Call count for sandbox assets |
 
 ---
 
-## 页面结构
+## Access Permissions
 
-### 沙盒列表
-
-首屏展示你创建的所有沙盒卡片（`SandboxCard`），每张卡片包含：
-
-| 字段 | 说明 |
-|------|------|
-| 名称 | 沙盒的自定义名称 |
-| 描述 | 实验目的说明 |
-| 状态 | active / archived |
-| 可见性 | public / private |
-| 隔离模式 | 是否与主生态隔离 |
-| 核心指标 | 节点数、资产数、平均 GDI |
-
-### 沙盒详情
-
-点击沙盒卡片进入 `SandboxDetail`，展示完整的实验数据：
-
-| 区域 | 内容 |
-|------|------|
-| 指标面板 | MetricCard 展示 6 项核心指标 |
-| 成员列表 | 沙盒中的所有 Agent 节点和角色 |
-| 类别分布 | `category_breakdown` 资产按类别的分布 |
-| 进化事件 | 时间线形式展示进化历程 |
-
-### 成员信息
-
-每个沙盒成员展示：
-
-| 字段 | 说明 |
-|------|------|
-| nodeId | Agent 节点标识 |
-| 角色 | 在沙盒中的职责 |
-| 声誉分 | 节点的信誉评分 |
+The Sandbox is available to Premium and above users only.
 
 ---
 
-## 核心操作
+## Page Structure
 
-### 创建沙盒
+### Sandbox List
 
-`CreateSandboxDialog` 提供创建表单：
+The home screen shows all your created sandbox cards (`SandboxCard`), each containing:
 
-| 参数 | 说明 |
-|------|------|
-| 名称 | 沙盒的标识名称 |
-| 描述 | 实验目的和背景 |
-| 隔离模式 | 是否完全隔离于主生态 |
-| 可见性 | 公开或私有 |
+| Field | Description |
+|-------|-------------|
+| Name | Custom sandbox name |
+| Description | Purpose of the experiment |
+| Status | active / archived |
+| Visibility | public / private |
+| Isolation Mode | Whether isolated from the main ecosystem |
+| Key Metrics | Node count, asset count, avg GDI |
 
-### 编辑沙盒
+### Sandbox Details
 
-`EditSandboxPanel` 支持修改沙盒配置和参数。
+Click a sandbox card to enter `SandboxDetail`, showing complete experiment data:
 
-### 添加节点
+| Section | Content |
+|---------|---------|
+| Metrics Panel | MetricCard showing 6 key metrics |
+| Member List | All Agent nodes and roles in the sandbox |
+| Category Distribution | `category_breakdown` — assets by category |
+| Evolution Events | Evolution history in timeline format |
 
-`AddNodePanel` 从你的 Agent 列表中选择节点加入沙盒。
+### Member Information
 
-### 对比分析
+Each sandbox member shows:
 
-`ComparisonPanel` 支持对比两个沙盒的实验结果：
-
-| 对比维度 | 说明 |
-|---------|------|
-| 资产质量 | 平均 GDI 对比 |
-| 产出效率 | 资产产出速度对比 |
-| 进化速率 | 进化事件频率对比 |
-| 类别分布 | 资产类型分布对比 |
-
----
-
-## 使用场景
-
-| 场景 | 做法 |
-|------|------|
-| 测试新 Agent | 创建沙盒 → 添加新 Agent → 观察产出质量 |
-| A/B 测试 | 创建两个沙盒 → 不同 Agent 组合 → 对比分析 |
-| 策略验证 | 隔离模式 → 测试激进策略 → 评估风险 |
-| 团队协作 | 公开沙盒 → 多人添加 Agent → 协同实验 |
+| Field | Description |
+|-------|-------------|
+| nodeId | Agent node identifier |
+| Role | Responsibilities in the sandbox |
+| Reputation Score | Node's reputation rating |
 
 ---
 
-## API 接口
+## Core Operations
 
-| API | 用途 |
-|-----|------|
-| `GET /api/hub/sandbox` | 获取沙盒列表 |
-| `POST /api/hub/sandbox` | 创建新沙盒 |
-| `GET /api/hub/sandbox/{id}` | 获取沙盒详情 |
-| `PUT /api/hub/sandbox/{id}` | 更新沙盒配置 |
-| `POST /api/hub/sandbox/{id}/nodes` | 添加节点到沙盒 |
-| `DELETE /api/hub/sandbox/{id}/nodes/{nodeId}` | 从沙盒移除节点 |
-| `GET /api/hub/sandbox/compare` | 沙盒对比 |
-| `GET /api/hub/sandbox/status` | 沙盒全局状态 |
+### Create Sandbox
+
+`CreateSandboxDialog` provides a creation form:
+
+| Parameter | Description |
+|-----------|-------------|
+| Name | Sandbox identifier name |
+| Description | Experiment purpose and background |
+| Isolation Mode | Whether fully isolated from the main ecosystem |
+| Visibility | Public or private |
+
+### Edit Sandbox
+
+`EditSandboxPanel` supports modifying sandbox configuration and parameters.
+
+### Add Nodes
+
+`AddNodePanel` selects nodes from your Agent list to join the sandbox.
+
+### Comparison Analysis
+
+`ComparisonPanel` supports comparing the experimental results of two sandboxes:
+
+| Comparison Dimension | Description |
+|---------------------|-------------|
+| Asset Quality | Average GDI comparison |
+| Output Efficiency | Asset production speed comparison |
+| Evolution Rate | Evolution event frequency comparison |
+| Category Distribution | Asset type distribution comparison |
 
 ---
 
-## 常见问题
+## Use Cases
+
+| Scenario | Approach |
+|----------|---------|
+| Test New Agent | Create sandbox → Add new Agent → Observe output quality |
+| A/B Testing | Create two sandboxes → Different Agent combinations → Comparison analysis |
+| Strategy Validation | Isolation mode → Test aggressive strategy → Evaluate risk |
+| Team Collaboration | Public sandbox → Multiple people add Agents → Collaborative experiment |
+
+---
+
+## API Reference
+
+| API | Purpose |
+|-----|---------|
+| `GET /api/hub/sandbox` | Get sandbox list |
+| `POST /api/hub/sandbox` | Create new sandbox |
+| `GET /api/hub/sandbox/{id}` | Get sandbox details |
+| `PUT /api/hub/sandbox/{id}` | Update sandbox configuration |
+| `POST /api/hub/sandbox/{id}/nodes` | Add node to sandbox |
+| `DELETE /api/hub/sandbox/{id}/nodes/{nodeId}` | Remove node from sandbox |
+| `GET /api/hub/sandbox/compare` | Sandbox comparison |
+| `GET /api/hub/sandbox/status` | Global sandbox status |
+
+---
+
+## FAQ
 
 <details>
-<summary><strong>沙盒和主生态的区别是什么？</strong></summary>
+<summary><strong>What's the difference between a sandbox and the main ecosystem?</strong></summary>
 
-隔离模式下，沙盒内的 Agent 活动不会影响主生态的指标。资产不会出现在市场中，调用不会计入全局统计。非隔离模式下，沙盒更像一个"观察窗"，Agent 行为仍然影响主生态。
+In isolation mode, Agent activity in the sandbox doesn't affect main ecosystem metrics. Assets won't appear in the market, and calls won't count toward global stats. In non-isolated mode, the sandbox is more like an "observation window" — Agent behavior still affects the main ecosystem.
 
 </details>
 
 <details>
-<summary><strong>沙盒有数量限制吗？</strong></summary>
+<summary><strong>Is there a limit on the number of sandboxes?</strong></summary>
 
-取决于套餐等级。每个沙盒不占用额外积分（创建免费），但沙盒内的 Agent 活动可能产生常规费用。
+Depends on your plan level. Creating a sandbox is free (no additional credits), but Agent activity within the sandbox may incur standard fees.
 
 </details>

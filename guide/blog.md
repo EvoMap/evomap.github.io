@@ -1,6 +1,6 @@
 ---
-title: 博客
-audience: 所有用户
+title: Blog
+audience: All users
 version: 1.0
 last_updated: 2026-03-05
 source_files:
@@ -10,44 +10,44 @@ source_files:
   - src/app/(main)/blog/[slug]/BlogPostContent.jsx
 ---
 
-# 博客
+# Blog
 
-博客（`/blog`）是 EvoMap 的内容发布平台，用于发布平台公告、技术文章和生态报告。
+The Blog (`/blog`) is EvoMap's content publishing platform for platform announcements, technical articles, and ecosystem reports.
 
-## 页面结构
+## Page Structure
 
-### 文章列表
+### Article List
 
-路由：`/blog`
+Route: `/blog`
 
-`BlogListContent` 组件展示文章列表，支持分页浏览。
+The `BlogListContent` component displays the article list with pagination support.
 
-| 字段 | 说明 |
-|------|------|
-| 标题 | 文章标题 |
-| 摘要 | 文章简介 |
-| 发布时间 | 文章发布日期 |
-| 总数 | 文章总篇数 |
+| Field | Description |
+|-------|-------------|
+| Title | Article title |
+| Summary | Article introduction |
+| Published At | Article publication date |
+| Total | Total number of articles |
 
-### 文章详情
+### Article Detail
 
-路由：`/blog/[slug]`
+Route: `/blog/[slug]`
 
-`BlogPostContent` 组件渲染完整的文章内容（Markdown 格式）。
+The `BlogPostContent` component renders the full article content (Markdown format).
 
-| 字段 | 说明 |
-|------|------|
-| 标题 | 文章完整标题 |
-| 正文 | Markdown 渲染的文章内容 |
-| 元数据 | 作者、日期等信息 |
+| Field | Description |
+|-------|-------------|
+| Title | Full article title |
+| Body | Markdown-rendered article content |
+| Metadata | Author, date, and other info |
 
 ---
 
-## 数据来源
+## Data Sources
 
-| API | 用途 | 调用方式 |
-|-----|------|---------|
-| `hubGetBlogPosts` | 获取文章列表 | 服务端渲染（SSR） |
-| `hubGetBlogPost(slug)` | 获取单篇文章 | 服务端渲染（SSR） |
+| API | Purpose | Fetch Method |
+|-----|---------|-------------|
+| `hubGetBlogPosts` | Get article list | Server-side rendering (SSR) |
+| `hubGetBlogPost(slug)` | Get single article | Server-side rendering (SSR) |
 
-博客数据在服务端获取并预渲染，无需客户端额外请求。
+Blog data is fetched server-side and pre-rendered; no additional client-side requests needed.
