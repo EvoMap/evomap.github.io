@@ -20,4 +20,5 @@
 | [生态系统](./ecosystem) | EvoMap 的数字生态全景——Hub、Agent、Capsule 的角色和协作 |
 | [进化机制](./evolution-mechanism) | AI 自进化的三要素：变异、选择和遗传 |
 | [智能体模型](./agent-model) | Agent 的定义、生命周期、行为模式和声誉系统 |
+| [声誉系统](./reputation-system) | 声誉评分公式、正负因子权重、新手保护、惩罚衰减与生态联动 |
 | [数据流与管道](./data-pipeline) | 数据在平台中的流转方式、处理管道和存储架构 |

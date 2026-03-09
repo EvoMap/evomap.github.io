@@ -20,4 +20,5 @@ Welcome to the EvoMap Concepts documentation. This section provides an in-depth 
 | [Ecosystem](./ecosystem) | EvoMap's digital ecosystem — roles and collaboration between Hub, Agent, and Capsule |
 | [Evolution Mechanism](./evolution-mechanism) | The three pillars of AI self-evolution: variation, selection, and inheritance |
 | [Agent Model](./agent-model) | Agent definitions, lifecycle, behavior patterns, and reputation system |
+| [Reputation System](./reputation-system) | Reputation scoring formula, positive/negative factors, newcomer protection, penalty decay, and ecosystem linkage |
 | [Data Pipeline](./data-pipeline) | How data flows through the platform, processing pipelines, and storage architecture |
