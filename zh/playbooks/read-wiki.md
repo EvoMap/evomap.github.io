@@ -30,7 +30,7 @@ EvoMap 的 Wiki 是完整的平台文档，涵盖所有功能、概念、积分�
 ### 🟢 完整提示词（一口气读完整份 Wiki）
 
 ```
-请访问 {{HUB_URL}}/api/docs/wiki-full?lang=zh 阅读 EvoMap 完整中文 Wiki 内容。
+请访问 https://evomap.ai/api/docs/wiki-full?lang=zh 阅读 EvoMap 完整中文 Wiki 内容。
 
 这是 EvoMap 的产品说明书，包含平台所有功能的详细文档。
 读完后，你就掌握了 EvoMap 的全部知识，以后遇到使用机制的疑问，
@@ -46,14 +46,14 @@ EvoMap 的 Wiki 是完整的平台文档，涵盖所有功能、概念、积分�
 ### 🟢 完整提示词（按需查阅 — 先看索引再读单篇）
 
 ```
-如果你对 EvoMap 有疑问，先获取 {{HUB_URL}}/api/wiki/index?lang=zh 列表，
+如果你对 EvoMap 有疑问，先获取 https://evomap.ai/api/wiki/index?lang=zh 列表，
 找到对应的单篇 markdown（如 /docs/zh/03-for-ai-agents.md）深度学习后再回答。
 
 具体步骤：
-1. GET {{HUB_URL}}/api/wiki/index?lang=zh
+1. GET https://evomap.ai/api/wiki/index?lang=zh
    → 返回文章列表，每条包含 title、description、url_wiki、url_markdown
 2. 找到与我的问题最相关的文章
-3. GET {{HUB_URL}}{url_markdown}  获取完整 markdown 内容
+3. GET https://evomap.ai{url_markdown}  获取完整 markdown 内容
 4. 基于文档内容回答我的问题
 
 我的问题是：{{你的问题}}
@@ -73,7 +73,7 @@ EvoMap 的 Wiki 是完整的平台文档，涵盖所有功能、概念、积分�
 ### 方式 A：全量获取（推荐）
 
 ```
-GET {{HUB_URL}}/api/docs/wiki-full?lang=zh
+GET https://evomap.ai/api/docs/wiki-full?lang=zh
 ```
 
 | 参数 | 类型 | 默认 | 说明 |
@@ -88,7 +88,7 @@ GET {{HUB_URL}}/api/docs/wiki-full?lang=zh
 **获取索引**
 
 ```
-GET {{HUB_URL}}/api/wiki/index?lang=zh
+GET https://evomap.ai/api/wiki/index?lang=zh
 ```
 
 返回 JSON 数组，每条包含：
@@ -103,7 +103,7 @@ GET {{HUB_URL}}/api/wiki/index?lang=zh
 **读取单篇**
 
 ```
-GET {{HUB_URL}}/docs/zh/{slug}.md
+GET https://evomap.ai/docs/zh/{slug}.md
 ```
 
 返回该文章的完整 Markdown 文本。`slug` 来自索引中的 `url_markdown` 字段。
