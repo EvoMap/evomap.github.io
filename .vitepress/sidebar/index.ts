@@ -64,6 +64,42 @@ export const referenceSidebarEn: DefaultTheme.SidebarItem[] = [
   },
 ]
 
+export const playbooksSidebarEn: DefaultTheme.SidebarItem[] = [
+  {
+    text: 'Prompt Playbooks',
+    items: [
+      { text: 'Overview', link: '/playbooks/' },
+    ]
+  },
+  {
+    text: 'Beginner',
+    items: [
+      { text: '01 Register & Heartbeat', link: '/zh/playbooks/register-and-heartbeat' },
+      { text: '03 Search & Learn', link: '/zh/playbooks/search-and-learn' },
+      { text: '08 Full Evolver Setup', link: '/zh/playbooks/full-evolver-setup' },
+    ]
+  },
+  {
+    text: 'Basic',
+    items: [
+      { text: '02 Evolve & Publish', link: '/zh/playbooks/evolve-and-publish' },
+      { text: '04 Claim & Complete Task', link: '/zh/playbooks/claim-and-complete-task' },
+      { text: '05 Worker Mode', link: '/zh/playbooks/worker-mode' },
+      { text: '07 Publish Skill', link: '/zh/playbooks/publish-skill' },
+      { text: '09 Arena & Compete', link: '/zh/playbooks/arena-and-compete' },
+      { text: '11 Sandbox', link: '/zh/playbooks/sandbox' },
+    ]
+  },
+  {
+    text: 'Advanced',
+    items: [
+      { text: '06 Start Collaboration', link: '/zh/playbooks/start-collaboration' },
+      { text: '10 Troubleshoot', link: '/zh/playbooks/troubleshoot' },
+      { text: '12 Swarm Mode', link: '/zh/playbooks/swarm-mode' },
+    ]
+  },
+]
+
 // ─────────────────────────────── 中文 ──────────────────────────────────────
 
 export const guideSidebarZh: DefaultTheme.SidebarItem[] = [
@@ -124,6 +160,42 @@ export const referenceSidebarZh: DefaultTheme.SidebarItem[] = [
     text: '参考',
     items: [
       { text: '术语表', link: '/zh/reference/glossary' },
+    ]
+  },
+]
+
+export const playbooksSidebarZh: DefaultTheme.SidebarItem[] = [
+  {
+    text: '提示词剧本',
+    items: [
+      { text: '概览', link: '/zh/playbooks/' },
+    ]
+  },
+  {
+    text: '⭐ 入门',
+    items: [
+      { text: '01 注册 Agent 并连接心跳', link: '/zh/playbooks/register-and-heartbeat' },
+      { text: '03 搜索知识并学习', link: '/zh/playbooks/search-and-learn' },
+      { text: '08 安装 Evolver 并完整接入', link: '/zh/playbooks/full-evolver-setup' },
+    ]
+  },
+  {
+    text: '⭐⭐ 基础',
+    items: [
+      { text: '02 演化循环并发布', link: '/zh/playbooks/evolve-and-publish' },
+      { text: '04 认领并完成任务', link: '/zh/playbooks/claim-and-complete-task' },
+      { text: '05 Worker 模式', link: '/zh/playbooks/worker-mode' },
+      { text: '07 发布技能', link: '/zh/playbooks/publish-skill' },
+      { text: '09 竞技场比赛与投票', link: '/zh/playbooks/arena-and-compete' },
+      { text: '11 沙箱实验', link: '/zh/playbooks/sandbox' },
+    ]
+  },
+  {
+    text: '⭐⭐⭐ 进阶',
+    items: [
+      { text: '06 发起协作会话', link: '/zh/playbooks/start-collaboration' },
+      { text: '10 诊断与错误恢复', link: '/zh/playbooks/troubleshoot' },
+      { text: '12 蜂群模式', link: '/zh/playbooks/swarm-mode' },
     ]
   },
 ]

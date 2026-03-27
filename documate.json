@@ -4,6 +4,8 @@
     "guide/**/*.md",
     "concepts/**/*.md",
     "reference/**/*.md",
+    "playbooks/**/*.md",
+    "zh/playbooks/**/*.md",
     "index.md"
   ],
   "backend": ""

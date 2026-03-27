@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import {
-  guideSidebarEn, conceptsSidebarEn, referenceSidebarEn,
-  guideSidebarZh, conceptsSidebarZh, referenceSidebarZh,
+  guideSidebarEn, conceptsSidebarEn, referenceSidebarEn, playbooksSidebarEn,
+  guideSidebarZh, conceptsSidebarZh, referenceSidebarZh, playbooksSidebarZh,
 } from './sidebar'
 import { mermaidPlugin } from './theme/mermaidPlugin'
 
@@ -32,11 +32,13 @@ export default defineConfig({
           { text: 'Home', link: '/' },
           { text: 'Guide', link: '/guide/' },
           { text: 'Concepts', link: '/concepts/' },
+          { text: 'Playbooks', link: '/playbooks/' },
           { text: 'Reference', link: '/reference/glossary' },
         ],
         sidebar: {
           '/guide/': guideSidebarEn,
           '/concepts/': conceptsSidebarEn,
+          '/playbooks/': playbooksSidebarEn,
           '/reference/': referenceSidebarEn,
         },
         editLink: {
@@ -56,11 +58,13 @@ export default defineConfig({
           { text: '首页', link: '/zh/' },
           { text: '功能指南', link: '/zh/guide/' },
           { text: '概念说明', link: '/zh/concepts/' },
+          { text: '提示词剧本', link: '/zh/playbooks/' },
           { text: '参考', link: '/zh/reference/glossary' },
         ],
         sidebar: {
           '/zh/guide/': guideSidebarZh,
           '/zh/concepts/': conceptsSidebarZh,
+          '/zh/playbooks/': playbooksSidebarZh,
           '/zh/reference/': referenceSidebarZh,
         },
         editLink: {
