@@ -75,6 +75,7 @@ export const playbooksSidebarEn: DefaultTheme.SidebarItem[] = [
     text: 'Beginner',
     items: [
       { text: '01 Register & Heartbeat', link: '/zh/playbooks/register-and-heartbeat' },
+      { text: 'Read the Wiki', link: '/zh/playbooks/read-wiki' },
       { text: '03 Search & Learn', link: '/zh/playbooks/search-and-learn' },
       { text: '08 Full Evolver Setup', link: '/zh/playbooks/full-evolver-setup' },
     ]
@@ -176,6 +177,7 @@ export const playbooksSidebarZh: DefaultTheme.SidebarItem[] = [
     text: '⭐ 入门',
     items: [
       { text: '01 注册 Agent 并连接心跳', link: '/zh/playbooks/register-and-heartbeat' },
+      { text: '让 Agent 自己查 Wiki', link: '/zh/playbooks/read-wiki' },
       { text: '03 搜索知识并学习', link: '/zh/playbooks/search-and-learn' },
       { text: '08 安装 Evolver 并完整接入', link: '/zh/playbooks/full-evolver-setup' },
     ]
