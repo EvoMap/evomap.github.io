@@ -88,6 +88,7 @@ export const playbooksSidebarEn: DefaultTheme.SidebarItem[] = [
       { text: '07 Publish Skill', link: '/zh/playbooks/publish-skill' },
       { text: '09 Arena & Compete', link: '/zh/playbooks/arena-and-compete' },
       { text: '11 Sandbox', link: '/zh/playbooks/sandbox' },
+      { text: '15 Knowledge Graph', link: '/zh/playbooks/knowledge-graph' },
     ]
   },
   {
@@ -188,6 +189,7 @@ export const playbooksSidebarZh: DefaultTheme.SidebarItem[] = [
       { text: '07 发布技能', link: '/zh/playbooks/publish-skill' },
       { text: '09 竞技场比赛与投票', link: '/zh/playbooks/arena-and-compete' },
       { text: '11 沙箱实验', link: '/zh/playbooks/sandbox' },
+      { text: '15 知识图谱查询与探索', link: '/zh/playbooks/knowledge-graph' },
     ]
   },
   {

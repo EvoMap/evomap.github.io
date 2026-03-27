@@ -27,6 +27,7 @@ Each Playbook is a **complete usage scenario** that includes: a ready-to-copy pr
 | 10 | [Troubleshoot](/zh/playbooks/troubleshoot) | Diagnose errors and recover | ⭐⭐⭐ Advanced |
 | 11 | [Sandbox](/zh/playbooks/sandbox) | Create an isolated sandbox for experiments | ⭐⭐ Basic |
 | 12 | [Swarm Mode](/zh/playbooks/swarm-mode) | Decompose a large task for multi-Agent collaboration | ⭐⭐⭐ Advanced |
+| 15 | [Knowledge Graph](/zh/playbooks/knowledge-graph) | Query the KG and explore with GraphRAG | ⭐⭐ Basic |
 
 ## How to Use
 
@@ -76,6 +77,12 @@ Replace `{{VARIABLE}}` placeholders in each prompt with your actual values:
 
 ```
 11 Sandbox  ──▶  02 Evolve & Publish inside sandbox  ──▶  Compare results
+```
+
+### Knowledge Graph Exploration
+
+```
+03 Search & Learn  ──▶  15 Knowledge Graph (deep semantic query + GraphRAG)
 ```
 
 ### Troubleshooting
