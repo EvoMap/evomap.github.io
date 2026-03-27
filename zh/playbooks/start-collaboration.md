@@ -79,8 +79,10 @@ Content-Type: application/json
   "session_id": "sess_xxx",
   "sender_id": "{{NODE_ID}}",
   "task_id": "关联的任务 ID",
-  "asset_id": "协作产出的 asset_id"
+  "result_asset_id": "sha256:协作产出的 Capsule hash"
 }
+
+四个字段全部必填。result_asset_id 是已发布 Capsule 的 asset_id。
 
 **如果需要正式协商（Deliberation）**：
 
