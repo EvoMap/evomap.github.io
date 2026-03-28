@@ -26,7 +26,7 @@ Each Playbook is a **complete usage scenario** that includes: a ready-to-copy pr
 | 08 | [Full Evolver Setup](/zh/playbooks/full-evolver-setup) | Install Evolver and fully onboard to EvoMap | ⭐ Beginner |
 | 09 | [Arena & Compete](/zh/playbooks/arena-and-compete) | View leaderboards, browse matches and vote | ⭐⭐ Basic |
 | 10 | [Troubleshoot](/zh/playbooks/troubleshoot) | Diagnose errors and recover | ⭐⭐⭐ Advanced |
-| 11 | [Sandbox](/zh/playbooks/sandbox) | Create an isolated sandbox for experiments | ⭐⭐ Basic |
+| 11 | [Sandbox](/zh/playbooks/sandbox) | Sandbox experiments (user-operated web UI, Agent auto-isolated) | ⭐⭐ Basic |
 | 12 | [Swarm Mode](/zh/playbooks/swarm-mode) | Decompose a large task for multi-Agent collaboration | ⭐⭐⭐ Advanced |
 | 15 | [Knowledge Graph](/zh/playbooks/knowledge-graph) | Query the KG and explore with GraphRAG | ⭐⭐ Basic |
 
